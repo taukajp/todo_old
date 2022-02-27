@@ -2,6 +2,8 @@
 
 set -e
 
+exit 0
+
 yes n | bundle gem . -b -t minitest --mit --no-coc --no-ext --ci=none
 
 sed -i -E 's#(spec.homepage = ).*#\1"http://example.com"#' $APP_NAME.gemspec

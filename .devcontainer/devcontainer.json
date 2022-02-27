@@ -4,7 +4,7 @@
   "name": "Ruby",
   "dockerComposeFile": "docker-compose.yml",
   "service": "app",
-  "workspaceFolder": "/myapp",
+  "workspaceFolder": "/todo",
 
   // Set *default* container specific settings.json values on container create.
   "settings": {
