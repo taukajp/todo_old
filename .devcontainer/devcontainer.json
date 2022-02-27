@@ -42,7 +42,8 @@
   "extensions": [
     "rebornix.Ruby",
     "castwide.solargraph",
-    "koichisasada.vscode-rdbg"
+    "koichisasada.vscode-rdbg",
+    "cweijan.vscode-database-client2"
   ],
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
