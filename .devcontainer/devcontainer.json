@@ -18,14 +18,14 @@
       "zsh": {
         "path": "zsh",
         "args": ["-l"]
-      },
+      }
     },
     "terminal.integrated.defaultProfile.linux": "bash",
     "ruby.useBundler": true,
     "ruby.useLanguageServer": true,
     "ruby.lint": {
       "standard": {
-        "useBundler": true,
+        "useBundler": true
       }
     },
     "ruby.format": "standard",
@@ -34,8 +34,8 @@
     "solargraph.definitions": true,
     "[ruby]": {
       "editor.formatOnSave": false,
-      "editor.defaultFormatter": "rebornix.ruby",
-    },
+      "editor.defaultFormatter": "rebornix.ruby"
+    }
   },
 
   // Add the IDs of extensions you want installed when the container is created.
@@ -43,7 +43,8 @@
     "rebornix.Ruby",
     "castwide.solargraph",
     "koichisasada.vscode-rdbg",
-    "cweijan.vscode-database-client2"
+    "cweijan.vscode-database-client2",
+    "codelios.dartsass"
   ],
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
@@ -58,7 +59,6 @@
   "remoteUser": "vscode",
 
   "features": {
-    "git": "latest"
+    // "git": "latest"
   }
-
 }

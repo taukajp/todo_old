@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+// Set your brand colors
+// $purple: #8A4D76;
+// $pink: #FA7C91;
+// $brown: #757763;
+// $beige-light: #D0D1CD;
+// $beige-lighter: #EFF0EB;
+$firebrick: #B22222;
+$wakamidori: #98d98e;
+$yamabukiiro: #f8b500;
+
+// Update Bulma's global variables
+// $family-sans-serif: "Nunito", sans-serif;
+// $grey-dark: $brown;
+// $grey-light: $beige-light;
+$primary: $yamabukiiro;
+// $link: $pink;
+// $widescreen-enabled: false;
+// $fullhd-enabled: false;
+
+// Update some of Bulma's component variables
+// $body-background-color: $beige-lighter;
+// $control-border-width: 2px;
+// $input-border-color: transparent;
+// $input-shadow: none;
+$section-padding: 1.5rem 1.5rem;
+$section-padding-medium: 4.5rem 1.5rem;
+$section-padding-large: 9rem 1.5rem;
+
+@import "bulma/bulma.sass";

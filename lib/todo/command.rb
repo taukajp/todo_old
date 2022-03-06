@@ -38,6 +38,15 @@ module Todo
       execute(:list, nil, options)
     end
 
+    desc "server", "Start http server process"
+    method_option :port, type: :numeric, aliases: "-p", default: 9292, desc: "Port"
+    method_option :environment, type: :string, aliases: "-E", default: "production", desc: "Environment"
+    def server
+      puts "Start server process..."
+      config = File.expand_path(File.join(File.dirname(__FILE__), "..", "..", "config.ru"))
+      exec "cd #{File.dirname(config)} && rackup -E #{options[:environment]} -p #{options[:port]} #{config}"
+    end
+
     class << self
       # @return [Boolean] true
       def exit_on_failure?

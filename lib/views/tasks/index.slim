@@ -1,0 +1,33 @@
+h2.subtitle.is-4 Listing Tasks
+
+a.button.is-link.is-outlined.is-small href="/tasks/new"
+  span.icon: i.far.fa-lg.fa-file-alt
+  span New
+table.table.is-striped.is-hoverable
+  thead
+    tr
+      th.is-narrow ID
+      th Name
+      th Content
+      th.is-narrow Status
+      th.is-narrow Created Time
+      th.is-narrow
+  tbody
+    - @tasks.each do |task|
+      tr
+        td.is-narrow = task.id
+        td = task.name
+        td = task.content
+        td.is-narrow = task.status.upcase
+        td.is-narrow = task.created_at.strftime('%Y/%m/%d %H:%M:%S')
+        td
+          div.field.is-grouped
+            p.control
+              a.button.is-link.is-outlined.is-small href="/tasks/#{task.id}/edit"
+                span.icon: i.far.fa-lg.fa-edit
+                span Edit
+            p.control
+              a.button.is-danger.is-outlined.is-small[
+                href="tasks/#{task.id}" data-confirm="Are you sure?" data-method="delete"]
+                span.icon: i.far.fa-lg.fa-trash-alt
+                span Delete

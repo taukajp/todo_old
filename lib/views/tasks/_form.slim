@@ -1,0 +1,46 @@
+== slim :_errors, locals: { obj: task }
+div.field.is-horizontal
+  div.field-label.is-normal
+    label.label Name
+  div.field-body
+    div.field
+      div.control
+        input#task_name.input class=(error_class(task, :name)) type="text" name="name" value=task.name placeholder=""
+      == error_message(task, :name)
+
+div.field.is-horizontal
+  div.field-label.is-normal
+    label.label Content
+  div.field-body
+    div.field
+      div.control
+        textarea#task_content.textarea class=(error_class(task, :content)) name="content" placeholder="" = task.content
+      == error_message(task, :content)
+
+- if task.persisted?
+  div.field.is-horizontal
+    div.field-label.is-normal
+      label.label Status
+    div.field-body
+      div.field
+        div.control
+          div.select
+            select#task_status class=(error_class(task, :status)) name="status"
+              == options_for_task_status(task)
+
+  / div
+    label for="task_name" Name
+    div
+      input#task_name class="" type="text" name="name" value=task.name placeholder="例：買い物"
+  / div
+    label for="task_content" Content
+    div
+      / input#task_content class=(error_class(task, :content)) type="text" name="content" value=task.content placeholder="例：牛乳を買う"
+      input#task_content class="" type="text" name="content" value=task.content placeholder="例：牛乳を買う"
+  / - if task.persisted?
+    div
+      label for="task_status" Status
+      div
+        / select#task_status class=(error_class(task, :status)) name="status"
+        select#task_status class="" name="status"
+          == options_for_task_status(task)

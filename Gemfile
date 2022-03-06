@@ -9,6 +9,6 @@ gem "rake", "~> 13.0"
 
 gem "minitest", "~> 5.0"
 
-gem "standard", "~> 1.7", :groups => [:development, :test]
-gem "solargraph", "~> 0.44", :groups => [:development, :test]
-gem "debug", "~> 1.4", :groups => [:development, :test]
+gem "standard", "~> 1.11", :groups => [:development, :test]
+gem "solargraph", "~> 0.44.3", :groups => [:development, :test]
+gem "debug", "~> 1.5", :groups => [:development, :test]

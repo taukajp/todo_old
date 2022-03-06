@@ -1,0 +1,28 @@
+doctype html
+html
+  meta charset="utf-8"
+  meta http-equiv="X-UA-Compatible" content="IE=edge"
+  meta name="viewport" content="width=device-width, initial-scale=1"
+  title Todo Application
+  link rel="stylesheet" href="/css/fontawesome/css/all.min.css"
+  link rel="stylesheet" href="/css/style.min.css"
+  script src="/js/rails-ujs.js"
+  body
+    section.section
+      header
+        nav.navbar.is-primary role="navigation" aria-label="main navigation"
+          div.navbar-brand
+            a.navbar-item href="/tasks" roll="button"
+              h1.title.is-4 Todo Application
+          div.navbar-menu.is-active
+            div.navbar-start
+              a.navbar-item class=("is-active" unless @status) href="/tasks" ALL Tasks
+              a.navbar-item class=("is-active" if @status == "notyet") href="/tasks?status=notyet" NOTYET Tasks
+              a.navbar-item class=("is-active" if @status == "done") href="/tasks?status=done" DONE Tasks
+              a.navbar-item class=("is-active" if @status == "pending") href="/tasks?status=pending" PENDING Tasks
+      main.columns
+        div.column
+          div.section
+            - if flash[:notice]
+              p.notification.is-success.is-light = flash[:notice]
+            == yield

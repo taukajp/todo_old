@@ -35,6 +35,11 @@ Gem::Specification.new do |spec|
   # spec.add_dependency "example-gem", "~> 1.0"
 
   spec.add_runtime_dependency "activerecord", "~> 7.0"
+  spec.add_runtime_dependency "puma", "~> 5.6"
+  spec.add_runtime_dependency "rack-flash3", "~> 1.0"
+  spec.add_runtime_dependency "sinatra", "~> 2.2"
+  spec.add_runtime_dependency "sinatra-contrib", "~> 2.2"
+  spec.add_runtime_dependency "slim", "~> 4.1"
   spec.add_runtime_dependency "sqlite3", "~> 1.4"
   spec.add_runtime_dependency "thor", "~> 1.2"
 

@@ -1,0 +1,11 @@
+h2.subtitle.is-4 New Task
+
+form action="/tasks" method="post"
+  fieldset style="width:70vw"
+    == slim :"tasks/_form", locals: { task: @task }
+    div.field.is-horizontal
+      div.field-label
+      div.field-body
+        div.field
+          div.control
+            button.button.is-link.is-outlined.is-small name="commit" data-disable-with="Create Task" Create Task

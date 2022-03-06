@@ -1,0 +1,5 @@
+- if obj.errors.any?
+  div.message.is-danger
+    ul.message-body
+      - obj.errors.full_messages.each do |message|
+        li = message
